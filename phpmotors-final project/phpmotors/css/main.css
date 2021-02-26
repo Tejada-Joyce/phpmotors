@@ -1,0 +1,639 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* {-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-family: 'Oxygen Mono', monospace;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    padding-right: 1.5rem;
+    color: #000000;
+}
+
+nav {
+    margin: 1em 0;    
+    background-color: #3a3a3a;
+    }
+    
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    justify-content: left;
+    padding: 0.9rem 0.7rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #4c96d7;
+    color: #000000;
+}
+
+main h1, h2, p.msg  {  
+    color: #000000;
+    padding-left: 0.7rem;
+}
+
+main > p {
+    font-size: 1em;
+    padding: 0 0.7rem;
+    line-height: 21px;
+} 
+
+main a.admin {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+main #car-deal {
+    display: grid;
+    grid-template-columns: 40% repeat(3, 20%);
+    grid-template-rows: 21% repeat(3, 20%) 10%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+main #car-deal #car-details {
+    grid-area: 1 / 1 / 2 / 2;  
+    z-index: 2;
+}
+
+main #car-deal #car-details > h2 {
+    color: #4c96d7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+main #car-details ul {
+    list-style-type: none;
+    padding-left: 0.7rem;
+    color: #4c96d7;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+main #car-deal img {
+    grid-area: 1 / 1 / 5 / 5;
+    width: 95%;
+    max-width: 100%;
+    align-self: start;
+    justify-self: center;
+}
+
+main a#cta {
+    display: block; 
+    padding: 0.5em;
+    width: 45%;
+    background: #4c96d7; 
+    color: #3a3a3a; 
+    text-align: center; 
+    font-size: 1.3em; 
+    font-family: Arial;  
+    text-decoration: none;
+    border: 1px solid  #000000;
+    grid-area: 6 / 1 / 7 / 5;
+    justify-self: center; 
+    z-index: 1;
+}
+
+main #car-info {
+    display:flex;
+    flex-direction: column-reverse;
+    padding-bottom: 1.5em;
+}
+
+main .car-info-items {
+    flex: 50%;
+}
+
+main .car-info-items#reviews {
+    margin-top: 1rem;
+}
+
+main .grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    grid-column-gap: 2%;
+    grid-row-gap: 4%;
+    padding: 0 0.7rem;
+}
+
+main .grid .item{
+    margin: auto;
+    font-size: 0.8em;
+    height: 100%;
+    width: 100%;
+}
+
+main .grid .item .img-container {
+    background-color: #4c96d7;
+    border: 1px solid #000000;
+    padding: 2%;
+    max-width: 100%;
+    height: 80%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+main .grid .item .img-container img {
+    margin: auto;
+}
+
+main .car-info-items#reviews li {
+    padding: 0.5rem;
+    font-size: 0.8em;
+}
+
+main ul li {        
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+main form {
+    margin: 0% 2% 2%;
+    padding: 0% 1%;
+    color: #000000;
+}
+
+main h2.form {    
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-left: 1.3rem;
+}
+
+main form label {
+    display: block;
+    margin: 0.7%;
+    padding-left:0.9rem;
+    padding-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+main form span {
+    display: block;
+    padding: 0 1.1rem;
+    font-size: 0.8rem;
+    color: #0e81e6;
+    margin-bottom: 1.1%;
+}
+
+main form input, input.submitBt, select, textarea {
+    font-size: 1rem;
+    padding: 2% 2%;
+    margin-left: 1.2em;
+    width: 90%;
+    border-radius: 7px;
+}
+
+main form select option {
+    font-size: 1rem;
+}
+
+main form select, textarea {
+    border-color: #3a3a3a;
+    border-width: 2px;
+}
+
+main form textarea {
+    height: 80px;
+}
+
+main form input.submitBt {
+    -webkit-appearance:none;
+    color: #ffffff;
+    margin-top: 0.9em;
+    background-color: #4c96d7;
+}
+
+main p.form, p.form-msg {
+    padding: 0% 6%;
+}
+
+main p.form-msg, p.msg {
+    color: #ff0000;
+    font-weight: bold;
+    font-style: italic; 
+}
+
+main form fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+main form fieldset .pImage {
+	display: unset;
+	margin-left: 1.5rem;
+	padding: 0;
+	width: 5%;
+}
+
+main form fieldset label.pImage {
+	margin-left: 0;
+}
+
+main table {
+	clear:both;	
+    width: 90%;    
+	margin: 0.7rem auto 0.7rem 1.6rem;
+}
+
+main th {
+	text-align: left;
+    padding: 3px;    
+    font-size: 1.2rem;
+}
+
+main td  {	
+	text-align: left;
+	padding: 1%;	
+}
+
+footer {
+    border-color: #3a3a3a;
+    border-top-style: solid;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 0.8em;
+    color: #000000;
+}
+
+footer p {
+    margin: 0.2em;
+}
+
+#inv-display, #image-display{
+    margin: 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#inv-display h2{
+    padding: 0;
+}
+   
+#inv-display li, #image-display li{
+    margin: 0.5em;
+    list-style-type: none;
+    flex: 1 1 auto;    
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 5px 4px 8px 2px #bebebeef;
+}
+
+#inv-display li img {
+    max-width: 100%;
+}
+
+#image-display li img{
+    max-width: 80%;
+}
+
+main .flexbox1 {
+    padding: 1%;
+}
+
+main .flexbox1 > img {  
+    width: 80%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    margin: 0 auto 25px auto;
+    border-radius: 25px;
+    box-shadow: 5px 4px 8px 5px #bebebeef;
+}
+
+main .flexbox1 > .details, main #thumbnails {
+    margin: 1% 4%;
+}
+
+main p.note {
+    font-style: italic;
+    color: #0e81e6;
+}
+
+main .flexbox2 {
+    display: flex;
+    justify-content: space-around;    
+    flex-direction: column-reverse;
+}
+
+main #thumbnails ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+main #thumbnails ul li {
+    list-style-type: none;
+    margin: 0 0.2rem;
+
+}
+
+main #thumbnails img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 2px #bebebeef;
+}
+
+main p.desc {
+    text-align: left;
+    line-height: 1.5rem;
+    padding-right: 4%;
+}
+
+main .details h3 {
+    margin: 4% 0;
+    font-size: 1.3rem;
+}
+
+main p.price, p.det {
+    font-size: 1.2rem;
+    margin: 0 auto 2px;
+    font-weight: bold;
+}
+
+main p.det {
+    margin-bottom: 0.5rem;
+}
+
+main ul#reviews {  
+    display: block;
+    margin: 1%;
+    padding: 0 1.7rem;
+}
+
+main li.container {
+    background-color: #9fc0dcdb;  
+    display: block;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 2px #bebebeef;
+    margin: 1rem 0;
+    width: 97%;
+}
+
+main li.container span{
+    display: block;
+    background-color: #ffffff;  
+    margin: 0.8rem 0.2rem 0.3rem 0.6rem;
+    padding: 0.9rem;
+    border-radius: 5px;
+    line-height: 1.5rem;
+}
+  
+@media only screen and (min-width: 37.6em) {
+
+    body {
+        background-image: url("/phpmotors/images/site/small_check.jpg");
+        background-size: 115%;
+    }
+    
+    body #content {
+        border: 5px solid  #4c96d7;
+        border-radius: 8px;
+        margin: 1% 11%;
+        background-color: #ffffff;
+    }
+
+    header a {
+        padding-right: 3rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    main h1, h2, p.msg {
+        padding-left: 1rem;
+    }
+
+    main > p {
+        padding: 0 1.2rem;
+    }
+
+    main #car-deal {
+        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-rows: 30% 25% 25% 20%;
+    }
+
+    main #car-deal #car-details > h2 {      
+        font-size: 1.3em;
+    }
+    
+    main #car-details ul {
+        padding-left: 1rem;
+        font-size: 1rem;
+        margin-top: 0.3rem;
+    }
+    
+    main #car-deal #car-details { 
+        justify-self: start; 
+        align-self: center;
+        margin-left: 0.5rem;               
+    }
+    
+    main a#cta {
+        width: 45%;        
+        margin-left: 1rem;
+        grid-area: 2 / 1 / 3 / 2;
+        align-self: start;
+        justify-self: start;
+    }
+    
+    main #car-deal img {
+        grid-area: 1 / 1 / 5 / 5;
+        align-self: end;
+        justify-self: end;
+    }
+
+    main .grid {
+        padding: 1rem;
+        grid-column-gap: 4%;
+        padding: 0 1rem;
+    }
+    main #car-info {
+        flex-direction: row;
+    }
+
+    main .car-info-items#reviews {
+        margin-top: 0;
+    }
+
+    main h2.form {  
+        padding-left: 1.7rem;
+    }
+
+    main form label {
+        font-size: 1rem;
+        margin: 1% 0%;
+    }
+
+    main form span {
+        padding-left: 0.9rem;
+        margin-bottom: 1%;
+    }
+    
+    main form input, input.submitBt, select, textarea {
+        width: 50%;
+        padding: 1% 2%;
+    }
+
+    main p.form, p.form-msg {
+        padding: 0 2.1rem;
+    }  
+    
+    main table {
+        width: 60%;   
+    }
+
+    #inv-display, #image-display {
+		flex-flow: row wrap;		
+		justify-content: space-evenly;
+	}
+
+	#inv-display h2{
+		font-size: 1rem;
+	}
+
+	#inv-display li, #image-display li {
+        max-width: 210px;
+		flex: 1 0 auto;
+		height: 250px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+    }
+
+    #image-display li {
+        height: 220px;
+    }
+    
+    #inv-display li img, #image-display li img {
+        border-radius: 25px 25px 0 0;
+    }
+
+    #image-display li img{
+        max-width: 100%;
+    }
+      
+	#inv-display div, #image-display div {
+		width: 100%;
+    }
+    
+    main h1#vehicle {
+        margin-bottom: 1%;
+    }
+
+    main .flexbox1 {        
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    main .flexbox1 > img{ 
+        margin: 2% 3%;
+        width: 40%; 
+    } 
+
+    main .flexbox2 {
+        flex-direction: row;
+    }
+
+    main #thumbnails {
+        margin: 0 0 0 1rem;
+    }
+    
+    main #thumbnails h3 {
+		display: none;
+	}
+
+    main #thumbnails ul {
+		flex-flow: column wrap;
+		justify-content: flex-start;
+    }
+
+	main #thumbnails ul li {
+		margin: 0 0.5rem;
+    }
+
+    main #thumbnails img:hover {
+        transform: scale(2.4);
+    } 
+
+    main ul#reviews { 
+        padding: 0 1.5rem;
+    }
+
+    main li.container {
+        width: 100%;
+    }
+
+    main form#add-rev {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		align-items: start;
+		border-radius: 8px;
+		border: 2px solid  #4c96d7;
+		margin: 0 2rem 0.8rem;
+    }
+
+    main form#add-rev label[for=screen]{
+    	grid-area: 1 / 1 / 2 / 2; 
+        margin: 0;
+        align-self: center;
+    }
+
+    main form#add-rev input#screen{
+    	grid-area: 2 / 1 / 3 / 2;
+    	width: 90%;
+    }
+
+    main form#add-rev label[for=reviewText]{
+    	grid-area: 1 / 2 / 2 / 5; 
+        margin: 0;
+        align-self: center;
+    }
+
+    main form#add-rev textarea#reviewText{
+    	grid-area: 2 / 2 / 4 / 5;
+        width: 94%;
+        height: 94%;
+    }
+    
+    main form#add-rev input#rev {
+    	grid-area: 4 / 2 / 5 / 5;
+    	width: 94%;
+    	margin-top: 0.3rem;;
+    	margin-bottom: 0.5rem;
+    }
+
+} 

@@ -1,0 +1,56 @@
+--
+-- Tony Stark insert SQL statement
+--
+INSERT INTO clients (
+    clientFirstName,
+    clientLastName,
+    clientEmail,
+    clientPassword,
+    comment)
+VALUES (
+    'Tony', 
+    'Stark', 
+    'tony@starkent.com', 
+    'Iam1ronM@n', 
+    '"I am the real Ironman"'
+)
+
+--
+-- Tony Stark update SQL statement
+--
+UPDATE clients 
+SET clientLevel = 3
+WHERE clientId = 1;
+
+--
+-- spacious interior update SQL statement
+--
+UPDATE inventory
+SET    invDescription = replace(invDescription, 'small interior', 'spacious interior')
+WHERE  invId = 12;
+
+--
+-- select "SUV" items SQL statement
+--
+SELECT i.invModel, c.classificationName
+FROM inventory i INNER JOIN carclassification c
+ON i.classificationId = c.classificationId 
+-- WHERE i.classificationId = 1;
+WHERE c.classificationId = ( SELECT classificationId
+                           FROM carclassification
+                           WHERE classificationName = 'SUV');
+
+
+
+
+--
+-- delete Jeep Wrangler SQL statement
+--
+DELETE FROM inventory
+WHERE invId = 1;
+
+--
+-- invImage and invThumbnail update query
+--
+UPDATE inventory 
+SET invImage = CONCAT('/phpmotors', invImage), invThumbnail = CONCAT('/phpmotors', invThumbnail);
